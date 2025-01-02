@@ -220,7 +220,7 @@
 # print(y)
 # print(z)
 
-# 
+#
 #####################
 # STRINGS
 # Strings can have their elements accessed using the same indexing and slicing as lists
@@ -240,9 +240,9 @@
 # print(x)
 
 # MULTILINE STRINGS
-# x = '''Hello, 
+# x = '''Hello,
 # World!'''
-# x = """Hello, 
+# x = """Hello,
 # World!"""
 # x = 'Hello, \nWorld!'
 # print(x)
@@ -294,3 +294,109 @@
 # print(str1)
 # print(str2)
 # print(str3)
+
+
+# ####################
+# TUPLES
+# Tuples are immutable
+
+# FUNCTIONS
+# min and max
+# len and sum
+# count(value) - how many times a value appears in a tuple
+# index(value) - index of a value in a tuple
+# tuple(variable) - convert a list/string to a tuple
+
+
+# ####################
+# SETS
+# Sets are unordered and do not allow duplicates
+# Sets are immutable
+# Sets can be converted to lists/tuples and vice versa
+# We can initiate a set with repeating values though(x = {1,1,2,3,4,4})
+# x = {1, 2, 3, 4, 5}
+# y = list(x)
+# z = tuple(x)
+# ff = set(z)
+
+# Similar to JS when converting to a set, duplicates are removed
+# x = [1, 2, 3, 4, 5, 5, 5, 5]
+# y = set(x)
+
+# You can't access elements in a set using indexing
+# x = {1, 2, 3, 4, 5}
+# # print(x[0]) # Error
+# print(list(x)[2])
+# print(2 in x)
+
+# Set seems to sort the elements
+
+# Set functions
+# x = {1, 2, 3, 4, 5}
+# y = {1, 3, 7, 9}
+# print(min(x))
+# print(max(x))
+# print(len(x))
+# x.add(6)
+# x.remove(2) # the argument is a value, not index
+# x.pop() # removes the last element
+# x.clear() # removes all elements
+
+# UNION
+# print(x.union(y)) # combines two sets. Union function
+# print(x | y) # Union operator
+
+# # INTERSECTION
+# print(x.intersection(y)) # returns the common elements between two sets
+# print(x & y) # Intersection operator
+
+# # DIFFERENCE
+# print(x.difference(y)) # returns the elements that are in x but not in y
+# print(x - y) # Difference operator
+
+# # SIMMETRIC DIFFERENCE
+# print(x.symmetric_difference(y)) # returns the elements that are not common between two sets
+# print(x ^ y) # Symmetric difference operator
+
+
+# ######################
+# DICTIONARIES
+# Like objects in JS
+# key can a string, int or float or tuples(?)
+# x = {'name': 'Adam', 'age': 25, 'city': 'London', 1: 'One', 0.2: 'Zero point two'}
+# can be initiated with dict() function
+# x = {}
+# x = dict([('name', 'Adam'), ('age', 25), ('city', 'London')])
+# print(x)
+# x = dict((('name', 'Adam'), ('age', 25), ('city', 'London')))
+# print(x)
+# x = dict([[1, 'One'], [2, 'Two'], [3, 'Three']])
+# print('lastName' in x) # Check if a key is in the dictionary keys
+# print('One' in x.values()) # Check if a value is in the dictionary values
+# print(x['age'])
+# print(x[0.2])
+# print(x.get('name'))
+# print(x.get(0.3, 'Not Found')) # returns a default value if the key is not found
+# x['city'] = 'Manchester' # update a value
+
+# REMOVING VALUES
+# del x['age']
+# print(x.pop('name'))
+# print(x)
+# pop removes the key:value pair and returns the value
+
+
+# BUILD-IN FUNCTIONS
+# x = {1: 'One', 2: 'Two', 3: 'Three'}
+# print(min(x)) # Finds the minimum key
+# print(max(x)) # Finds the maximum key
+# print(len(x))
+# print(list(x.keys()))
+# print(list(x.values()))
+# print(list(x.items())) # returns a list of tuples
+# for key, value in x.items():
+#     print(key, value)
+# keys, values and items have to be conveted to list to use the build-in list functions
+# x.clear() # removes all elements
+# for key in x:
+#     print(key, x[key])
