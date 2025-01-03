@@ -1,20 +1,3 @@
-# ﬂowerpot = int(input('How many flowerpots?: '))
-# ﬂower_seeds = int(input('How many packs of ﬂower seeds?: '))
-# soil = int(input('How many bags of soil?: '))
-
-# ﬂowerpot_price = 4.00
-# ﬂower_seeds_price = 1.00
-# soil_price = 5.00
-
-# salex_tax = 0.06
-
-# items_price = (flowerpot * flowerpot_price) + (flower_seeds * flower_seeds_price) + (soil * soil_price)
-
-# final_price = (items_price * salex_tax) + items_price
-
-# print(final_price)
-
-
 # IF ELIF ELSE
 # x = int(input('first value:'))
 # y = int(input('second value:'))
@@ -297,6 +280,7 @@
 
 
 # ####################
+# ####################
 # TUPLES
 # Tuples are immutable
 
@@ -308,6 +292,7 @@
 # tuple(variable) - convert a list/string to a tuple
 
 
+# ####################
 # ####################
 # SETS
 # Sets are unordered and do not allow duplicates
@@ -360,6 +345,7 @@
 
 
 # ######################
+# ######################
 # DICTIONARIES
 # Like objects in JS
 # key can a string, int or float or tuples(?)
@@ -368,8 +354,8 @@
 # x = {}
 # x = dict([('name', 'Adam'), ('age', 25), ('city', 'London')])
 # print(x)
-# x = dict((('name', 'Adam'), ('age', 25), ('city', 'London')))
-# print(x)
+x = dict((('name', 'Adam'), ('age', 25), ('city', 'London')))
+print(x)
 # x = dict([[1, 'One'], [2, 'Two'], [3, 'Three']])
 # print('lastName' in x) # Check if a key is in the dictionary keys
 # print('One' in x.values()) # Check if a value is in the dictionary values
@@ -400,3 +386,17 @@
 # x.clear() # removes all elements
 # for key in x:
 #     print(key, x[key])
+
+
+# ###################
+# USING FILE SYSTEM
+# file = open('test.txt', 'r') # w - write, r - read, a - append, x - create
+# file.write('Hello, World!')
+# file.close()
+# file = open('test.txt', 'r')
+# s = file.readlines()
+# for line in file:
+#     print(line)
+# file.close()
+# print(s)
+# we can write only strings to a file
