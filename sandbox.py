@@ -1,17 +1,48 @@
-al = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-char = input('Enter a character: ')
-first = 0
-last = len(al) - 1
-found = False
-mid = 0
-while first <= last and not found:
-    mid = (first + last) // 2
-    if char == al[mid]:
-        found = True
-        break
-    else:
-        if char > al[mid]:
-            first = mid + 1
-        else:
-            last = mid - 1
-print(f'Character {"" if found else "not "}found in the list {f"at position {mid}" if found else ""}')
+# str_input = input("Enter a string: ")
+# n = len(str_input)
+# sorted_str = []
+# str = list(str_input)
+# hasSwapped = False
+# for i in range(n - 1):
+#     for j in range(n - 1 - i):
+#         if str[j] > str[j + 1]:
+#             str[j], str[j + 1] = str[j + 1], str[j]
+#             hasSwapped = True
+# print(', '.join(str)) # joining th list
+
+def merge_sort(arr):
+    result = arr
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left_half = arr[:mid]
+        right_half = arr[mid:]
+        merge_sort(left_half)
+        merge_sort(right_half)
+        
+        i = j = k = 0
+        while i < len(left_half) and j < len(right_half):
+            if left_half[i] < right_half[j]:
+                result[k] = left_half[i]
+                i += 1
+            else:
+                result[k] = right_half[j]
+                j += 1
+            k += 1
+            
+        while i < len(left_half):
+            result[k] = left_half[i]
+            i += 1
+            k += 1
+            
+        while j < len(right_half):
+            result[k] = right_half[j]
+            j += 1
+            k += 1
+            
+    return result
+            
+input_string = input('Enter a string: ')
+split_input = list(input_string)
+
+sorted = merge_sort(split_input)
+print(f'Sorted: {sorted}')
