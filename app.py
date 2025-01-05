@@ -354,8 +354,8 @@
 # x = {}
 # x = dict([('name', 'Adam'), ('age', 25), ('city', 'London')])
 # print(x)
-x = dict((('name', 'Adam'), ('age', 25), ('city', 'London')))
-print(x)
+# x = dict((('name', 'Adam'), ('age', 25), ('city', 'London')))
+# print(x)
 # x = dict([[1, 'One'], [2, 'Two'], [3, 'Three']])
 # print('lastName' in x) # Check if a key is in the dictionary keys
 # print('One' in x.values()) # Check if a value is in the dictionary values
@@ -400,3 +400,13 @@ print(x)
 # file.close()
 # print(s)
 # we can write only strings to a file
+
+
+###################
+# FUNCTIONS
+# def my_function(raz, dwa):  # function header
+#     """This is a function that prints 'Hello, World!'"""  # docstring
+#     print("Hello, World!")
+
+
+# my_function()

@@ -1,17 +1,17 @@
-# file = open('test.txt', 'r')
-# doc = file.readlines()
-# lines = 0
-# words = 0
-# characters = 0
-# for line in range(len(doc)):
-#     lines += 1
-#     print(line)
-#     for word in doc[line].split(" "):
-#         words += 1
-#         characters += len(word)
-# writefile = open('writefile.txt', 'w')
-# writefile.write(f"Lines: {lines}\nWords: {words}\nCharacters: {characters}")
-
-cities = dict([(1, "Edinburgh"), (2, "London"), (3, "Boston"), (4, "Tokyo")])
-
-print(cities)
+al = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+char = input('Enter a character: ')
+first = 0
+last = len(al) - 1
+found = False
+mid = 0
+while first <= last and not found:
+    mid = (first + last) // 2
+    if char == al[mid]:
+        found = True
+        break
+    else:
+        if char > al[mid]:
+            first = mid + 1
+        else:
+            last = mid - 1
+print(f'Character {"" if found else "not "}found in the list {f"at position {mid}" if found else ""}')
